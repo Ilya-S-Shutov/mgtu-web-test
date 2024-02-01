@@ -1,0 +1,225 @@
+{% extends "base.html" %}
+
+{% block title%}Инжинириум МГТУ им. Баумана{% endblock %}
+
+{% block main_dropdown%}
+  dropdown
+{% endblock %}
+
+{% block main_link_active%}
+  dropdown-toggle active
+{% endblock %}
+
+{% block main_dropdown_params %}
+  role="button" data-bs-toggle="dropdown" aria-expanded="false"
+{% endblock %}
+
+{% block second_dropdown_params %}
+  role="button"
+{% endblock %}
+
+{% block main_dropdown_menu%}
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#steps">Ступени обучения</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#courses">Курсы</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#questions">Ответы на вопросы</a></li>
+  </ul>
+{% endblock %}
+
+
+{% block main%}
+  <main>
+    <!-- Пример оптимального порядка шагов на основе доработанного исходного документа -->
+    <section class="section" id="steps">
+      <div class="mb-3 col-12 text-center">
+        <h2 class="section-head">Ступени обучения</h2>
+      </div>
+      
+      <div class="container d-flex flex-column-reverse">
+        <div>
+        <div class="row main__steps align-items-end position-relative">
+          <div class="main__steps_title main__steps_title5">
+            <img class="mgtu-logo  position-absolute" alt="МГТУ им. Н.Э.Баумана" src="https://inginirium.ru/img/mgtu_small.png">
+          </div>
+          <div class="col main__steps_s main__steps_s5">&gt; МГТУ им. Н.Э. Баумана</div>
+        </div>
+        <div class="row">
+          <div class="main__steps_title main__steps_title5"></div>
+          <div class="col main__steps_subtitle">Поступление в ведущий технический ВУЗ страны</div>
+        </div>
+        </div>
+        <div>
+        <div class="row main__steps">
+          <div class="main__steps_title main__steps_title4">9-11 класс</div>
+          <div class="col main__steps_s main__steps_s4">&gt; Технопарк</div>
+        </div>
+        <div class="row">
+          <div class="main__steps_title main__steps_title4"></div>
+          <div class="col main__steps_subtitle">Подготовка к поступлению в ВУЗ, проектная деятельность</div>
+        </div>
+        </div>
+        <div>
+        <div class="row main__steps">
+          <div class="main__steps_title main__steps_title3">5-8 класс</div>
+          <div class="col main__steps_s main__steps_s3">&gt; Инженерные курсы</div>
+        </div>
+        <div class="row">
+          <div class="main__steps_title main__steps_title3"></div>
+          <div class="col main__steps_subtitle">Курсы для средней школы разной сложности</div>
+        </div>
+        </div>
+        <div>
+        <div class="row main__steps">
+          <div class="main__steps_title main__steps_title2">1-4 класс</div>
+          <div class="col main__steps_s main__steps_s2">&gt; Подготовительные курсы</div>
+        </div>
+        <div class="row">
+          <div class="main__steps_title main__steps_title2"></div>
+          <div class="col main__steps_subtitle">Для младших классов</div>
+        </div>
+        </div>
+        <div>
+        <div class="row main__steps">
+          <div class="main__steps_title main__steps_title1">детский сад</div>
+          <div class="col main__steps_s main__steps_s1">&gt; Увлекательные курсы</div>
+        </div>
+        <div class="row">
+          <div class="main__steps_title main__steps_title1"></div>
+          <div class="col main__steps_subtitle">Для самых маленьких</div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="section" id="courses">
+      <div class="container">
+        <div class="mb-3 col-12 text-center">
+          <h2 class="section-head">Курсы</h2>
+        </div>
+        <div class="row">
+          <div class="courses col-xl-9 row justify-content-evenly">
+            <article class="courses__item col-12 col-md-5 col-lg-5">
+              <a class="courses__link" href="#">
+                <img class="courses__img" src="{{ url_for('static', filename='images/content/courses.png') }}" alt="Логотип курса 1">
+                <h3 class="courses__name">Название курса 4</h3>
+                <div class="courses__info">
+                  5-8 классы
+                </div>
+                <div class="courses__price">
+                  100 р/занятие
+                </div>
+              </a>
+            </article>
+            <article class="courses__item col-12 col-md-5 col-lg-5">
+              <a class="courses__link" href="#">
+                <img class="courses__img" src="{{ url_for('static', filename='images/content/courses.png') }}" alt="Логотип курса 2">
+                <h3 class="courses__name">Название курса 2</h3>
+                <div class="courses__info">
+                  8-9 классы
+                </div>
+                <div class="courses__price">
+                  1000 р/занятие
+                </div>
+              </a>
+            </article>
+            <article class="courses__item col-12 col-md-5 col-lg-5">
+              <a class="courses__link" href="#">
+                <img class="courses__img" src="{{ url_for('static', filename='images/content/courses.png') }}" alt="Логотип курса 3">
+                <h3 class="courses__name">Название курса 3</h3>
+                <div class="courses__info">
+                  9-11 классы
+                </div>
+                <div class="courses__price">
+                  1000 р/занятие
+                </div>
+              </a>
+            </article>
+            <article class="courses__item col-12 col-md-5 col-lg-5">
+              <a class="courses__link" href="#">
+                <img class="courses__img" src="{{ url_for('static', filename='images/content/courses.png') }}" alt="Логотип курса 4">
+                <h3 class="courses__name">Название курса 4</h3>
+                <div class="courses__info">
+                  9-11 классы
+                </div>
+                <div class="courses__price">
+                  10 р/занятие
+                </div>
+              </a>
+            </article>
+          </div>
+          <div class="form-wrap d-xl-block d-lg-none d-md-none d-none col-12 col-xl-3">
+            <h4 class="form__header mb-5">Записаться на курсы</h4>
+            <form class="form d-flex flex-column mb-3" action="#" method="post">
+              <input class="form__item" type="text" name="tel" placeholder="Введите имя">
+              <input class="form__item email" type="email" name="email" required placeholder="Введите e-mail*">
+              <button class="form__item btn" type="submit">Отправить данные</button>
+            </form>
+            <small class="form__warning">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint vero provident quaerat impedit sequi, sapiente voluptatem nam sed nobis maiores eius tempora in sit hic suscipit id, maxime ipsam temporibus!</small>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Использование декоративных изображений. -->
+    <section class="section" id="questions">
+      <div class="container">
+        <div class="mb-3 col-12 text-center">
+          <h2 class="section-head">Карусель вопросов</h2>
+        </div>
+        <div id="myCarousel" class="my-carousel carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel__body carousel-inner">
+            <div class="carousel-item active">
+              <div class="img_1">
+                <div class="my-carousel__item text-center p-4">
+                  <h3 class="question">Вопрос 1?</h3>
+                  <p class="answer">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                </div>
+            </div>
+            </div>
+            <div class="carousel-item">
+              <div class="img_2">
+                <div class="my-carousel__item text-center p-4">
+                  <h3 class="question">Вопрос 2?</h3>
+                  <p class="answer">Dolor dignissimos earum adipisci ad, quae aliquam atque ipsam odit iusto qui laudantium asperiores suscipit ducimus quo distinctio vero assumenda, fugiat a?</p>
+                </div>
+            </div>
+            </div>
+            <div class="carousel-item">
+              <div class="img_3">
+                <div class="my-carousel__item text-center p-4">
+                  <h3 class="question p-4">Вопрос 3?</h3>
+                  <p class="answer p-4">Aliquam aspernatur ipsam deserunt officia, animi facere repellat temporibus cupiditate voluptatibus fugit labore explicabo sunt velit distinctio, praesentium officiis repudiandae, autem quaerat!</p>
+                </div>
+            </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true">
+              <svg class="my-carousel__left-btn" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" fill="#999999" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+              <g><path d="M500,775.4L10,287.2l64.4-62.6L500,650.2l425.6-425.6l64.4,62.6L500,775.4z"/></g>
+              </svg>
+            </span>
+            <span class="visually-hidden">Предыдущий</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true">
+              <svg class="my-carousel__right-btn" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" fill="#999999" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+              <g><path d="M500,775.4L10,287.2l64.4-62.6L500,650.2l425.6-425.6l64.4,62.6L500,775.4z"/></g>
+              </svg>
+            </span>
+            <span class="visually-hidden">Следующий</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+{% endblock %}

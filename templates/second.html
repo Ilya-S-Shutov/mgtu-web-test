@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title%}
+  Вторая страница
+{% endblock %}
+
+{% block second_dropdown%}
+  dropdown
+{% endblock %}
+
+{% block second_link_active%}
+  dropdown-toggle active
+{% endblock %}
+
+{% block main_dropdown_params %}
+  role="button"
+{% endblock %}
+
+{% block second_dropdown_params %}
+  role="button" data-bs-toggle="dropdown" aria-expanded="false"
+{% endblock %}
+
+{% block second_dropdown_menu%}
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#text">Наборы текста</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#yellowBlock">Жёлтый блок</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#video">Видео</a></li>
+  </ul>
+{% endblock %}
+
+
+{% block main%}
+  <main>
+    <section class="section" id="text">
+      <div class="container">
+        <div class="mb-3 col-12 text-center">
+          <h2 class="section-head">Три текста</h2>
+        </div>
+
+          <p class="text text_sym">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat eveniet, 
+            dolorum est necessitatibus illum cumque enim, voluptatibus fugiat esse suscipit doloremque! Fuga iusto 
+            necessitatibus ullam ipsa quasi nisi perspiciatis ipsam. Ab explicabo eaque aliquam molestias aliquid dolores eos 
+            quasi ea! Velit minima ab doloremque quaerat expedita sequi modi.</p>
+          <p class="text text_sym">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam explicabo labore et ratione possimus 
+            ipsa corporis necessitatibus, architecto animi aliquid voluptate ipsum dolores molestiae dolorum quos optio a illum 
+            eaque.</p>
+          <p class="text text_sym">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dignissimos ducimus facilis eveniet 
+            pariatur, laudantium sint repellendus voluptas doloremque neque non libero dicta quaerat quas nemo tempore eaque 
+            id est sunt cupiditate sapiente. Ea, laudantium?</p>
+
+      </div>
+    </section>
+
+
+    <section class="section section_yellow" id="yellowBlock">
+      <div class="container">
+        <div class="row">
+          <div class="d-flex justify-content-end col-6 col-md-6 col-lg-6">
+            <img class="yellow-image" src="{{ url_for('static', filename='images/bg/headpic_camps.png') }}" alt="Модель образовательного лагеря">
+          </div>
+          <div class="d-flex col-6 col-md-6 col-lg-6 flex-column justify-content-center align-items-start">
+            <div class="mb-3">
+              <h2 class="section-head">Вот так заголовок!</h2>
+            </div>
+            <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Distinctio accusamus explicabo ea beatae fuga esse.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="video">
+      <div class="container">
+        <div class="video">
+          <iframe width="560" 
+                  height="315" 
+                  src="https://www.youtube.com/embed/IcW6L-vGvgo?si=u8UWSM_q5oYfrV69" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen>
+          </iframe>
+      </div>
+    </div>
+    </section>
+  </main>
+{% endblock %}
